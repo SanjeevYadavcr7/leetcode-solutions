@@ -17,9 +17,10 @@
 ## ⚡ Problems Tracker
 *Confidence: ⭐ (Struggled) | ⭐⭐ (Solved with hints) | ⭐⭐⭐ (Crushed it)*
 
-| ID | Problem Name | Topic | Difficulty | Status | Confidence | Next Review |
+| ID | Problem Name | Topic | Difficulty | Status | Confidence | Next Review | Notes |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| 1 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Array | Easy | 🔲 To-Do | -- | **Mar 30**
+| 1 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Array | Easy | 🔲 To-Do | -- | **Mar 30** | Hashset for O(n) |
+
 ---
 
 

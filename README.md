@@ -7,8 +7,8 @@
 *   **Active Revision:** [Link to reviewing problems]
 
 ## 💡 Topics Covered
-- [x] Arrays & Strings
-- [x] Linked Lists
+- [ ] Arrays
+- [ ] Linked Lists
 - [ ] Trees & Graphs
 - [ ] Dynamic Programming
 - [ ] Sorting & Searching

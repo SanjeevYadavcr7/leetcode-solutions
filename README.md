@@ -1,30 +1,34 @@
-# Way To Google | 2026
-
+# 🚀 Way To Google | 2026
+> **Guiding Principle:** Master the pattern, not the problem.
 
 ## 📊 Progress Overview
-*   **Total Problems:** 0/500
-*   **Easy:** 🟢 | **Medium:** 🟡 | **Hard:** 🔴
-*   **Active Revision:** [Link to reviewing problems]
+* **Total Problems:** 0/500
+* **Easy:** 🟢 0 | **Medium:** 🟡 0 | **Hard:** 🔴 0
+* **Active Revision:** [Review items marked for today's date]
 
 ## 💡 Topics Covered
-- [ ] Arrays
+- [ ] Arrays & Hashing
 - [ ] Linked Lists
 - [ ] Trees & Graphs
 - [ ] Dynamic Programming
 - [ ] Sorting & Searching
 
 ## ⚡ Problems Tracker
+*Confidence: ⭐ (Struggled) | ⭐⭐ (Solved with hints) | ⭐⭐⭐ (Crushed it)*
 
-| ID | Problem Name | Topic | Difficulty | Status | Solution | Notes |
-|:---|:---|:---|:---|:---|:---|:---|
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum) | Array | Easy | ✅ Solved | [C++](./Arrays/TwoSum.cpp) | Hashmap |
-| 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) | Linked List | Medium | 🔄 Reviewing | [Python](./LL/AddTwo.py) | Dummy Node |
+| ID | Problem Name | Topic | Difficulty | Status | Confidence | Next Review | Notes |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Array | Easy | 🔲 To-Do | -- | **Mar 30** | Use a HashSet for $O(n)$ |
+| 2 | [Two Sum](https://leetcode.com/problems/two-sum) | Array | Easy | 🔲 To-Do | -- | **Mar 30** | One-pass Hashmap |
+| 3 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers) | Linked List | Medium | 🔲 To-Do | -- | **Apr 01** | Dummy Node logic |
 
-## 🛠️ How I Use This Repo
-1.  **Solve:** Solve problems on platforms like LeetCode/GFG [3, 12].
-2.  **Document:** Add the link, difficulty, and status to this table.
-3.  **Refactor:** Save code in the respective topic folder [3].
-4.  **Review:** Review "Reviewing" status problems every 4 days [1].
+---
+
+## 🔁 Revision Strategy (Spaced Repetition)
+1. **Confidence ⭐:** Review in **24 hours**.
+2. **Confidence ⭐⭐:** Review in **3 days**.
+3. **Confidence ⭐⭐⭐:** Review in **7 days**.
+*Once a problem is crushed twice in a row, move review to **30 days**.*
 
 ## 📚 Resources
 - [NeetCode 150](https://neetcode.io/)

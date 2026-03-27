@@ -1,5 +1,5 @@
 # 🚀 Way To Google | 2026
-> **Guiding Principle:** Master the pattern, not the problem.
+<br/>
 
 ## 📊 Progress Overview
 * **Total Problems:** 0/500

@@ -15,13 +15,7 @@
 - [ ] Sorting & Searching
 
 ## ⚡ Problems Tracker
-*Confidence: ⭐ (Struggled) | ⭐⭐ (Solved with hints) | ⭐⭐⭐ (Crushed it)*
-
-| ID | Problem Name | Topic | Difficulty | Status | Confidence | Revision Date |
-|:---|:---|:---|:---|:---|:---|:---|
-| 1 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Array | Easy | 🔲 To-Do | -- | **Mar 30** |
-
----
+- 📋 [Revision Sheet](https://www.notion.so/33169a7a738c80e287e9d8b18231413d?v=33169a7a738c80c8b7eb000c355ae625)
 
 
 ## 📚 Resources

@@ -26,4 +26,4 @@
 
 ## 📚 Resources
 - [NeetCode 150](https://neetcode.io/)
-- [Striver's SDE Sheet](https://takeuforward.org/)
+- [Striver's SDE Sheet](https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems)

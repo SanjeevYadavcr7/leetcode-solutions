@@ -17,7 +17,7 @@
 ## ⚡ Problems Tracker
 *Confidence: ⭐ (Struggled) | ⭐⭐ (Solved with hints) | ⭐⭐⭐ (Crushed it)*
 
-| ID | Problem Name | Topic | Difficulty | Status | Confidence | Next Review |
+| ID | Problem Name | Topic | Difficulty | Status | Confidence | Revision Date |
 |:---|:---|:---|:---|:---|:---|:---|
 | 1 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate) | Array | Easy | 🔲 To-Do | -- | **Mar 30** |
 

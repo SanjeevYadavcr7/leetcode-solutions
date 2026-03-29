@@ -23,6 +23,7 @@
 - [Striver's SDE Sheet](https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems)
 - [GFG - Must Do Coding Interview Questions](https://www.geeksforgeeks.org/dsa/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/)
 
+<br/>
 
 ## 😃 Aha Moments
-- Bucket Sort is a non-comparison sort that achieves `O(N)` time by using array indices as buckets. It is optimal when the range of sorting values (like frequency or age) is small relative to the number of elements. If the range is significantly larger than N, space complexity makes it inefficient.
+- **Top K Frequent Elements:** Bucket Sort is a non-comparison sort that achieves `O(N)` time by using array indices as buckets. It is optimal when the range of sorting values (like frequency or age) is small relative to the number of elements. If the range is significantly larger than N, space complexity makes it inefficient.

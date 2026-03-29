@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# C++ build artifacts
+*.o
+*.obj
+*.out
+*.exe
+*.a
+*.lib
+*.so
+*.dylib
+*.dSYM/
+
+# Day folders (Day1, Day2, …): track only `.cpp` sources (any depth). `!Day*/**/` is required so
+# nested folders are not “fully ignored” (otherwise Git would skip `Day2/nested/foo.cpp`).
+Day*/**
+!Day*/**/
+!Day*/**/*.cpp

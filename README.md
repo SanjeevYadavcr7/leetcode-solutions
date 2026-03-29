@@ -30,8 +30,10 @@
 
 - If you are just reading the data to push it into another vector (like you did in groupAnagrams), you should actually use `const auto&`.
 ```
-for(const auto& pair : str_mp) { 
-    grp_angrms.push_back(pair.second); 
-}
+    for(const auto& pair : str_mp) { 
+        grp_angrms.push_back(pair.second); 
+    }
+    Why const? It tells the compiler (and other engineers), "I'm going to look at this data, but I promise I won't change it." This allows the
+    compiler to perform even more optimizations.
 ```
-Why const? It tells the compiler (and other engineers), "I'm going to look at this data, but I promise I won't change it." This allows the compiler to perform even more optimizations.
+

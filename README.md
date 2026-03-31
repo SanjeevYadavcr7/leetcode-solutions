@@ -37,4 +37,12 @@
     Why const? It tells the compiler (and other engineers), "I'm going to look at this data, but I promise I won't change it." This allows the
     compiler to perform even more optimizations.
   ```
+  
+- Whenever you see "Longest Reapeating...", "Longest Subsequnce....", etc. then high probability is that the problem is a sliding window type problem. 
+  ```
+    Sliding Window solution follows this pattern :
+    1. Moving right pointer to increase window size
+    2. Increase right until window is valid
+    3. If window is invalid, sequeeze the window by placing left pointer at a position which makes the window valid.
+  ```
 

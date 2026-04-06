@@ -45,4 +45,10 @@
     2. Increase right until window is valid
     3. If window is invalid, sequeeze the window by placing left pointer at a position which makes the window valid.
   ```
-
+  <br/>
+- To never forget the Monotonic Stack, imagine a line of people of different heights.
+  ```
+    You are walking down the line.
+    If you see someone shorter than the person before them, they are "blocked" from seeing anything further.
+    The moment you see someone taller, they "break" the line of sight for everyone shorter than them who came before. 
+  ```

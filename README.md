@@ -37,7 +37,7 @@
     Why const? It tells the compiler (and other engineers), "I'm going to look at this data, but I promise I won't change it." This allows the
     compiler to perform even more optimizations.
   ```
-  
+  <br/>
 - Whenever you see "Longest Reapeating...", "Longest Subsequnce....", etc. then high probability is that the problem is a sliding window type problem. 
   ```
     Sliding Window solution follows this pattern :

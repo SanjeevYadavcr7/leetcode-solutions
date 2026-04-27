@@ -11,6 +11,7 @@
  */
 class Solution {
 public:
+    // Time: O(N)  |  Space: O(N)
     TreeNode* buildTreeHelper(vector<int>& preorder, unordered_map<int, int>& inorderMap, int& idx, int start, int end) {
         if(idx >= preorder.size() || start > end) return NULL;
         

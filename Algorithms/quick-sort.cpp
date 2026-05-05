@@ -17,7 +17,7 @@ int getPivot(vector<int>& nums, int low, int high) {
     int pivot = nums[high];
     int i = low - 1;
     for(int j = low; j < high; j++) {
-        if(nums[j] < pivot) {
+        if(nums[j] > pivot) {
             i++;
             swap(nums[i], nums[j]);
         }
@@ -32,4 +32,19 @@ void quickSort(vector<int>& nums, int low, int high) {
         quickSort(nums, low, pivot - 1);
         quickSort(nums, pivot + 1, high);
     }
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    for(int i = 0; i < n; i++) cin >> arr[i];
+
+    quickSort(arr, 0, n - 1);
+
+    cout << "\narr[] = ";
+    for(const int& num : arr) cout << num << " ";
+    cout << endl;
+
+    return 0;
 }

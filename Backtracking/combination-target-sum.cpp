@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // Time: O(N^T/M)
     void getCombinationSum(int idx, int sum, int& target, vector<int>& nums, vector<int>& current, vector<vector<int>>& result) {
         if(sum == target) {
             result.push_back(current);

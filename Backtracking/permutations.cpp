@@ -47,4 +47,19 @@ public:
         getPermutations(0, nums, result);
         return result;    
     }
+
+/* NOTE: 
+   If multiple threads are reading the nums array while your Permutation function is swapping elements, 
+   the readers will see a "corrupted" (partially swapped) version of the data.
+   
+   Senior Tip: In a multi-threaded C++ environment, you would either:
+   1. Lock the array using a std::mutex (Slow).
+   2. Give each thread its own copy of the array (Fast and standard).
+   
+   🏁 Summary for Interviews: 
+   If an interviewer asks about this (and they will if they are senior), give them this answer:
+   "The swapping method is highly memory-efficient ($O(1)$ auxiliary space), but it relies on in-place mutation. 
+   If the input array is shared or needs to remain immutable for other processes, 
+   I would either pass a copy of the array or use a visited array to keep the original data read-only."
+*/
 };

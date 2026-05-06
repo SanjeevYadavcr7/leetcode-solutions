@@ -52,3 +52,20 @@
     If you see someone shorter than the person before them, they are "blocked" from seeing anything further.
     The moment you see someone taller, they "break" the line of sight for everyone shorter than them who came before. 
   ```
+  <br/>
+- The "Pick / Don't Pick" Pattern:
+  ```
+  The Visualization:
+  Treat the problem as a strict binary decision tree.
+  At every index, you have two choices: include the current number in your subset, or exclude it.
+  
+  The Maze Analogy:
+  Backtracking is like walking through a maze.
+  When you reach the end of a path (the base case idx == nums.size()), you don't start entirely over.
+  You take a step backward (subset.pop_back()) to "undo" your last decision, and then walk down the alternative path.
+  
+  The Optimization:
+  Never pass the subset array by value!
+  Passing by reference (vector<int>& subset) ensures you are using a single, shared path to explore all 2N combinations.
+  Rather than creating expensive memory clones at every intersection.
+  ```

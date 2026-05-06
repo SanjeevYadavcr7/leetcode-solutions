@@ -5,7 +5,6 @@ public:
             result.push_back(current);
             return;
         }
-        if(idx == nums.size()) return;
 
         for(int i = idx; i < nums.size(); i++) {
             if(i > idx && nums[i] == nums[i - 1]) continue;

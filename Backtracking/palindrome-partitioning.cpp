@@ -1,5 +1,7 @@
 class Solution {
 public:
+    // Time: O(N⋅2^N), Space: O(N).
+
     bool isPalindrome(string str) {
         int n = str.size();
         for(int i = 0; i < n / 2; i++) {

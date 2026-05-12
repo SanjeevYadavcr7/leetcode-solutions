@@ -1,7 +1,7 @@
 /*
     Graph is represented using 2 ways:
-    1. Adjacency Matrix : This is a O(N^2) solution because we have to make a 2D matrix of size N
-    2. Adjacency List : 
+    1. Adjacency Matrix : This is a O(V^2) solution because we have to make a 2D matrix of size N
+    2. Adjacency List : This is O(V+E) solution
 */
 
 
@@ -24,4 +24,15 @@ public:
         return adjMatrix;
     }
 
+    vector<vector<int>> getAdjacencyList(int n, vector<pair<int, int>> edges) {
+        vector<vector<int>> adjList(n + 1);
+        
+        for(auto& edge : edges) {
+            auto [u, v] = edge;
+            
+            adjList[u].push_back(v);
+            adjList[v].push_back(u);
+        }
+        return adjList;
+    }
 };

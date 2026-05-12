@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // Time: O(LogN) | Space: O(1)
     int findPeakElement(vector<int>& nums) {
         int left = 0;
         int right = nums.size() - 1;

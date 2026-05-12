@@ -5,13 +5,13 @@
 */
 
 
-// Representing graph using Adjacency List
 #include<iostream>
 #include<vector>
 using namespace std;
 
 class Solution {
 public: 
+    // Representing undirected graph using Adjacency Matrix
     vector<vector<int>> getAdjacencyMatrix(int n, vector<pair<int, int>> edges) {
         vector<vector<int>> adjMatrix(n+1, vector<int>(n+1, 0));
         
@@ -24,6 +24,7 @@ public:
         return adjMatrix;
     }
 
+    // Representing undirected graph using Adjacency List
     vector<vector<int>> getAdjacencyList(int n, vector<pair<int, int>> edges) {
         vector<vector<int>> adjList(n + 1);
         

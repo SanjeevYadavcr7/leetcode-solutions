@@ -4,6 +4,10 @@ using namespace std;
 
 class Solution {
     public: 
+    /*
+        Traversal Technique: BFS
+        Complexity: Time = O(V+E)  Space = O(V+E)
+    */
     int countComponents(int n, vector<vector<int>>& edges) {
         int comp = 0;
         vector<bool> visited(n, false);

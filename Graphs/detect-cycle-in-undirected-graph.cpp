@@ -5,12 +5,11 @@ using namespace std;
 class Solution {
   private:
     bool cycleExistsInGraph(int node, int parent, vector<bool>& visited, vector<vector<int>>& graph) {
-        if(visited[node]) return true;
-        
         visited[node] = true;
 
         for(auto nbr : graph[node]) {
             if(nbr != parent) {
+                if(visited[node]) return true;
                 if(cycleExistsInGraph(nbr, node, visited, graph)) return true;   
             }
         }

@@ -1,6 +1,9 @@
 
 class Solution {
 public:
+    // Time: O(M.N)  
+    // Space: O(1) Using input array to mark visited nodes
+
     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
         int rows = mat.size();
         int cols = mat[0].size();

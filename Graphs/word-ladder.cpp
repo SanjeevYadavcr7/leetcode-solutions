@@ -1,7 +1,7 @@
 class Solution {
 public:
     /*
-    Time Complexity: $O(M^2 * N), where M is the length of each word and N is the total number of words in the input list. 
+    Time Complexity: O(M^2 * N), where M is the length of each word and N is the total number of words in the input list. 
                      For each word popped from the queue, we iterate $M$ times, and inside that loop, we create a new string 
                      copy which takes O(M) time to modify/hash.
                      

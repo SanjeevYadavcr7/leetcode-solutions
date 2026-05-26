@@ -63,9 +63,20 @@
   Backtracking is like walking through a maze.
   When you reach the end of a path (the base case idx == nums.size()), you don't start entirely over.
   You take a step backward (subset.pop_back()) to "undo" your last decision, and then walk down the alternative path.
+  ```
+  <br/>
   
+- Word Ladder(Graph Problem)
+  ```
+  Optimization via State Generation vs. Selection:
+  If your dictionary has 50,000 words ($N$) and each word is 5 characters long ($L$), comparing your word to all other words takes $50,000 \times 5 = 250,000$ operations.However, generating all possible single-letter edits takes only $5 \times 26 = 130$ operations. Checking if those 130 words exist in an unordered_set takes $O(1)$ time each. Always generate possibilities if the search alphabet is constrained (like 26 letters).
+
   The Optimization:
   Never pass the subset array by value!
   Passing by reference (vector<int>& subset) ensures you are using a single, shared path to explore all 2N combinations.
   Rather than creating expensive memory clones at every intersection.
   ```
+  <br/>
+  
+
+

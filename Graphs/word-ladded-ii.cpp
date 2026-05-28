@@ -1,3 +1,15 @@
+/*
+Time Complexity: 
+In the worst-case scenario, the runtime is bounded by the number of valid paths generated, 
+up to O(26.M.N + K.M), 
+where, 
+M = word length
+N = total count of words
+K = total number of shortest path variations found.
+
+Space Complexity: O(N.M) to maintain the distance graph profile mappings alongside the internal tracking configurations.
+
+*/
 
 class Solution {
 using stringIntMap = unordered_map<string, int>;

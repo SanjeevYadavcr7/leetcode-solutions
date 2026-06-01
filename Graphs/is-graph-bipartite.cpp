@@ -1,3 +1,5 @@
+// Time: O(V + E)
+// Space: O(V)
 
 class Solution {
 private:

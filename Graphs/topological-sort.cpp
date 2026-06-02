@@ -15,7 +15,6 @@ public:
         int finishedCourses = 0;
         for(int i = 0; i < numCourses; i++) {
             if(inDegree[i] == 0) { 
-                cout << i << " ";
                 q.push(i); // push courses with no deps
                 finishedCourses++;
             }

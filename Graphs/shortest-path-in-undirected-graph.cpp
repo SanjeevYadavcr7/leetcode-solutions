@@ -36,6 +36,7 @@ class Solution {
             }
         }
 
+        // Non-reachable nodes are marked as -1
         for (int i = 0; i < V; i++) {
             if (dist[i] == 1e9) {
                 dist[i] = -1;

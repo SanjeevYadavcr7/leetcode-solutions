@@ -1,4 +1,15 @@
-// Time: O(E.LogV)
+/*
+
+Path With Minimum Effort is an optimization problem, not a simple reachability problem and 
+that is why we need to keep a separate array to store min effort to reach a cell, not just visited array.
+
+Time : E.LogV
+Space : m.n (total no. of cells)
+where,
+E = 4 * no. of rows * no. of columns
+V = no. of rows * no. of columns
+
+*/
 
 class Solution {
 private:

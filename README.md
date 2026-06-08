@@ -81,6 +81,14 @@
   path to explore all 2N combinations. Rather than creating expensive memory clones at every intersection.
   ```
   <br/>
+
+- Dijkstra Algorithm(When to use vs when not to use)
+  ```
+  When finding the shortest path/time in a weighted graph with no restrictions on steps or edges,
+  immediately reach for a priority_queue instead of a regular queue.
+  This ensures you explore optimal paths first and avoids re-processing overhead.
+  ```
+
   
 
 

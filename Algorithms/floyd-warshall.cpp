@@ -1,4 +1,8 @@
 /*
+  Floyd-Warshall doesn't combine single edges; it combines already-optimized subpaths. 
+  By the time the outer loop K reaches a node, all optimal ways to travel to and from that node 
+  using any combination of previous nodes are already perfectly preserved inside your 2D grid matrix.
+
   Time: O(V^3)  -->  O(V.V.V)  --> Three explicit nested loops assessing every vertex as a middle milestone (K).
   Space: O(V^2)  -->  2D Matrix
 */

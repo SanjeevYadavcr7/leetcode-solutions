@@ -3,6 +3,7 @@
   Space: O(V^2)  -->  2D Matrix
 */
 
+#include<iostream>
 #include <vector>
 #include <algorithm>
 
@@ -10,6 +11,23 @@ using namespace std;
 
 class FloydWarshall {
 public:
+    void constructDistanceArray(vector<vector<int>>& edges, vector<vector<int>>& dist) {
+        int n = dist.size();
+
+        // Base cases: distance to self is 0
+        for(int i = 0; i < n; i++) {
+            dist[i][i] = 0;
+        }
+
+        // Populate initial bidirectional edge values
+        for(auto& edge : edges) {
+            int u = edge[0];
+            int v = edge[1];
+            int w = edge[2];
+            dist[u][v] = dist[v][u] = w;
+        }
+    }
+
     void shortestDistance(vector<vector<int>>& matrix) {
         int n = matrix.size(); // Number of vertices
 
@@ -49,3 +67,28 @@ public:
         }
     }
 };
+
+
+int main() {
+    int n = 4;
+    vector<vector<int>> edges = {{0, 1, 2},
+                                 {1, 2, 3},
+                                 {2, 3, 1}};
+    
+    FloydWarshall obj;
+
+    vector<vector<int>> dist(n, vector<int>(n, -1));
+    
+    obj.constructDistanceArray(edges, dist);
+
+    obj.shortestDistance(dist);
+
+    cout << "Result = \n";
+    for(auto& row : dist) {
+        for(int& val : row) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}

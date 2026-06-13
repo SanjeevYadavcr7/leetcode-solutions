@@ -1,3 +1,11 @@
+/*
+  Prim's algorithm is used to find minimum cost to connect whole graph(minimum spanning tree).
+  The logic is simila to Dijkstra's algorithm. 
+  Pick least cost path to a unvisited neighbour node. 
+  Time: O(E.LogV)
+  Space: O(E + V)
+*/
+
 class Solution {
   public:
     int spanningTree(int V, vector<vector<int>>& edges) {

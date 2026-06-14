@@ -1,3 +1,9 @@
+/*
+    Time: O(V + E)  -->  O(V) to build parent and rank vector + O(E) to traverse through all edges
+    Space: O(V)  ->  To build parent and rank vector
+
+*/
+
 class DisjointSet {
 private:
     vector<int> parent;

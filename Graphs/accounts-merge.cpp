@@ -89,6 +89,7 @@ public:
 
 
 /* DFS Approach ------------------------------------------------------------------------------------------------ */
+// Total Time taken in DFS = O(N.K) (graph construction) + O(N.K) (DFS) + O(N.K.Log(N.K)) (for sorting)
 
 class Solution {
 private:

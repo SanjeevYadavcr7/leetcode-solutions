@@ -73,7 +73,7 @@ public:
             }
         }
 
-        int groups = n - edgesSelected - 1;
-        return groups;
+        int groups = n - edgesSelected;  // Total number of groups are Total Vertices - No. of edges used
+        return groups - 1;  // Wire will be groups - 1
     }
 };

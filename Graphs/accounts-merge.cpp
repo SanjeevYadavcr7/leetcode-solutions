@@ -1,3 +1,12 @@
+/*
+    Time Complexity  : O(E.LogE) -->  O(E.α(N))) for DSU(connecting nodes) + O(E.LogE) for sorting emails
+    Space Complexity : O(N + E)  -->  O(N) for building DSU + O(E) for building map
+    where,
+    N = no. of accounts
+    K = Maximum email in one account
+    E = Total number of emails ~(N.K)
+*/
+
 class DisjointSet {
 private:
     vector<int> rank, parent;

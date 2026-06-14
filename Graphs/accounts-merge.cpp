@@ -84,3 +84,63 @@ public:
         return result;
     }
 };
+
+
+
+
+/* DFS Approach ------------------------------------------------------------------------------------------------ */
+
+class Solution {
+private:
+    void dfs(const string& email, unordered_set<string>& visited, 
+            unordered_map<string, vector<string>>& graph, vector<string>& mergedEmails) {
+        visited.insert(email);
+        mergedEmails.push_back(email);
+
+        for(const string& nbr : graph[email]) {
+            if(!visited.count(nbr)) {
+                dfs(nbr, visited, graph, mergedEmails);
+            }
+        }
+    }
+
+public:
+    vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
+        int n = accounts.size();
+        unordered_map<string, vector<string>> graph(n);
+        unordered_map<string, int> emailToAccID;
+
+        // Step 1: Construct Bi-directional graph and email -> accountID map
+        for(int i = 0; i < n; i++) {
+            string u = accounts[i][1];
+            for(int j = 1; j < accounts[i].size(); j++) {
+                string v = accounts[i][j];
+                
+                graph[u].push_back(v);
+                graph[v].push_back(u);
+                
+                emailToAccID[v] = i;
+            }
+        }
+
+        unordered_set<string> visited;
+        vector<vector<string>> result;
+
+        for(auto [email, accountID] : emailToAccID) {
+            if(!visited.count(email)) {
+                string userName = accounts[accountID][0];
+                vector<string> mergedEmails;
+
+                dfs(email, visited, graph, mergedEmails);
+
+                sort(mergedEmails.begin(), mergedEmails.end());
+
+                mergedEmails.insert(mergedEmails.begin(), userName);
+
+                result.push_back(mergedEmails);
+            }
+        }
+
+        return result;
+    }
+};

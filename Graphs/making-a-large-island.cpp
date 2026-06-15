@@ -51,6 +51,12 @@ public:
         for(int r = 0; r < N; r++) {
             for(int c = 0; c < N; c++) {
                 if(grid[r][c] == 0) {
+
+                    /* 
+                        Using this set to uniquely pick islandIDs
+                        Suppose we have --> left and top 1(part of same island) and in middle zero 
+                        then that 1(island area) will add left and top 2 times
+                    */
                     unordered_set<int> uniqueNbrIslands;
 
                     for(auto [x, y] : directions) {

@@ -1,4 +1,5 @@
 /*
+  Algorithm Uses: Tarjan's Algorithm
   APs are nodes, not edges. Use a set to prevent duplicates. 
   Condition: low[nbr] >= disc[node]. 
   Root Node Exception: The root is only an AP if it has > 1 independent DFS children (use an internal counter inside the DFS), NOT just multiple edges!

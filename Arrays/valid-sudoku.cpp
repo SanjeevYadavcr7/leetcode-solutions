@@ -1,3 +1,13 @@
+/*
+Time: O(N^2)  |  Space: O(N^2)
+
+Box ID Formula = (r / 3) * 3 + (c / 3)
+
+The idea main idea in this question that we divide whole 9 * 9 grid into 9 smaller sub-grids of size 3 * 3. This is done to find BOX ID.
+We find it by mapping the row and columns ID to 1D array value.
+Normally if we have to find the cell value of a given row and column we use this formula: Index=(Row×Total Columns)+Column
+Now in our case, we have divided whole grid into 9 smaller grids(each with ID 0, 1, 2, ....) so boxID formula becomes Box ID=(r/3)×3+(c/3)
+*/
 
 class Solution {
 public:

@@ -1,6 +1,15 @@
 /*
-    Time : O(M.N)  -->  Standard DFS(each cell gets visited constant number of times)
-    Space: O(M.N)  -->  Visited array
+
+Time : O(M.N)  -->  Standard DFS(each cell gets visited constant number of times)
+Space: O(M.N)  -->  Visited array
+
+This problem can be solved using BFS(Multi-Source BFS) or DFS.
+
+APPROACH:
+1. Instead of thinking to go to border(ocean) from every cell, invert the problem.
+2. Go from border(which are already touching sea) to the possible cells from where water can flow in.
+3. Mark the cells where both pacific and atlantic water can reach.
+4. Check and return the cells where both waters can reach.
 */
 
 class Solution {

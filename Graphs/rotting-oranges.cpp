@@ -1,3 +1,17 @@
+/*
+
+Time : O(M.N) | Space : O(M.N)
+
+Appraoch: MULTI-SOURCE BFS
+
+The idea is to store all rotten oranges in the queue and keep rottening neighbour oranges until NO fresh oranges are present.
+
+IMPORTANT: 
+It is possible that there could be an orange which will never get rotten, 
+to handle this scenario, in starting itself we would need to count fresh oranges and in the end check if all fresh oranges got rotten.
+
+*/
+
 class Solution {
 public:
     int orangesRotting(vector<vector<int>>& grid) {

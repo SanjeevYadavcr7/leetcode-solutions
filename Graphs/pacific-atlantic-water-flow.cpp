@@ -1,3 +1,8 @@
+/*
+    Time : O(M.N)  -->  Standard DFS(each cell gets visited constant number of times)
+    Space: O(M.N)  -->  Visited array
+*/
+
 class Solution {
     vector<pair<int, int>> directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
     

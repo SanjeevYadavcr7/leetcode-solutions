@@ -11,6 +11,11 @@ Sliding Window solution follows this pattern :
 3. If window is invalid, sequeeze the window by placing left pointer at a position which makes the window valid.
 
 In this problem, we keep on moving right pointer until window becomes invalid i.e. (window_size - max_freq > k) i.e. (replacements > k)
+
+IMPORTANT:
+The key takeaway here is that once we have found a valid window, we don't need to decrease the size of it. 
+The window keeps moving toward the right. At each step, even if the window becomes invalid, we never decrease its size. 
+We increase the size only when we find a valid window of larger size.
 */
 
 class Solution {

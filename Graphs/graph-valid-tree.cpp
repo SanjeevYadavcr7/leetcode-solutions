@@ -1,4 +1,63 @@
 /*
+    Approach: Kruskal's Algorithm
+      
+*/
+class Dsu {
+private:
+    vector<int> rank, parent;
+public:
+    Dsu(int n) {
+        parent.resize(n);
+        rank.resize(n, 1);
+
+        for(int i = 0; i < n; i++) {
+            parent[i] = i;
+        }
+    }
+
+    int findUltimateParent(int node) {
+        if(parent[node] == node) return node;
+        return parent[node] = findUltimateParent(parent[node]);
+    }
+
+    bool unite(int a, int b) {
+        int parA = findUltimateParent(a);
+        int parB = findUltimateParent(b);
+
+        if(parA == parB) return false;
+
+        if(rank[parA] < rank[parB]) {
+            parent[parA] = parB;
+        } else if(rank[parA] > rank[parB]) {
+            parent[parB] = parA;
+        } else {
+            parent[parB] = parA;
+            rank[parA]++;
+        }
+        return true;
+    }
+};
+
+class Solution {
+public:
+    bool validTree(int n, vector<vector<int>>& edges) {
+        if(n - 1 != edges.size()) return false;
+
+        Dsu obj(n);
+
+        for(auto& edge : edges) {
+            if(!obj.unite(edge[0], edge[1])) {
+                return false;
+            }
+        }
+        return true;
+    }
+};
+
+
+/*-------------------------------------------------------------------------------*/
+
+/*
     Approach: DFS
     Time: O(N)
     Actual time complexity is O(N + E), where N = no. of nodes and E = no. of edges

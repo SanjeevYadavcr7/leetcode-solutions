@@ -1,4 +1,10 @@
 /*
+Approach: Optimzed Prim's Algorithm(without using head)
+Time: O(N^2)
+*/
+
+
+/*
   Approach: Use Prim's Algorithm
   Time: O(N^2.LogN)
 */

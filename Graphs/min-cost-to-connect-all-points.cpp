@@ -2,7 +2,6 @@
 Approach: Optimzed Prim's Algorithm(without using head)
 Time: O(N^2)
 */
-
 class Solution {
 public:
     int minCostConnectPoints(vector<vector<int>>& points) {

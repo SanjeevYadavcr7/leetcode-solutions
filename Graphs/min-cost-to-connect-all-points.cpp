@@ -3,8 +3,49 @@ Approach: Optimzed Prim's Algorithm(without using head)
 Time: O(N^2)
 */
 
+class Solution {
+public:
+    int minCostConnectPoints(vector<vector<int>>& points) {
+        int N = points.size();
 
-/*
+        vector<int> minDist(N, INT_MAX);
+        vector<int> inMST(N, false);
+
+        minDist[0] = 0;
+        int totalMinCost = 0;
+
+        for(int j = 0; j < N; ++j) {
+            int currNode = -1;
+            int currMinDist = INT_MAX;
+
+            // Get neighbor node which has minimum distance from current node
+            for(int i = 0; i < N; i++) {
+                if(!inMST[i] && minDist[i] < currMinDist) {
+                    currMinDist = minDist[i];
+                    currNode = i;
+                }
+            }
+
+            inMST[currNode] = true;
+            totalMinCost += currMinDist;
+
+            for(int i = 0; i < N; ++i) {
+                if(!inMST[i]) {
+                    int dis = abs(points[currNode][0] - points[i][0]) + abs(points[currNode][1] - points[i][1]);
+                    if(dis < minDist[i]) {
+                        minDist[i] = dis;
+                    }
+                }
+            }
+        }
+
+        return totalMinCost;
+    }
+};
+
+
+
+/*-----------------------------------------------------------------------------
   Approach: Use Prim's Algorithm
   Time: O(N^2.LogN)
 */

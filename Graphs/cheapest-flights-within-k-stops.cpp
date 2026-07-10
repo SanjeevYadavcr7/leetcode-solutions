@@ -16,6 +16,9 @@ public:
                 Temp array makes sure only level wise-relaxation happens.
                 Use a copy so updates within this round don't cascade
                 each round should only add ONE more edge to any path
+
+                Use this example to understad: 
+                0 -> 1 -> 2 -> 3 and src = 0, dst = 3, K = 1
             */
             vector<int> temp = dist;
 

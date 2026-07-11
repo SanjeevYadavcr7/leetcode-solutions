@@ -1,18 +1,18 @@
-# 🚀 Way To Google | 2026
+# 🚀 Leetcode Solutions | 2026
 
 <br/>
 
-## 📊 Progress Overview
-* **Total Problems:** 0/500
-* **Easy:** 🟢 0 | **Medium:** 🟡 0 | **Hard:** 🔴 0
-* **Active Revision:** [Review items marked for today's date]
-
 ## 💡 Topics Covered
-- [ ] Arrays & Hashing
-- [ ] Linked Lists
-- [ ] Trees & Graphs
+- [x] Arrays & Hashing
+- [x] Sorting & Searching
+- [x] Two-Pointers
+- [x] Binary Search
+- [x] Backtracking
+- [x] Linked Lists
+- [x] Heap(Priority Queue)
+- [x] Trees
+- [x] Graphs
 - [ ] Dynamic Programming
-- [ ] Sorting & Searching
 
 ## ⚡ Problems Tracker
 - 📋 [Revision Sheet](https://www.notion.so/33169a7a738c80e287e9d8b18231413d?v=33169a7a738c80c8b7eb000c355ae625)

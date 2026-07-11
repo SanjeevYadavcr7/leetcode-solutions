@@ -1,6 +1,9 @@
 /* 
   Asked in July 2026
   Question Link: https://www.geeksforgeeks.org/problems/minimum-swaps/1
+
+  Time: O(N.LogN) -> because of sorting original array
+  Space: O(N) -> for storing sorted order in a temporary array
 */
 class Solution {
   public:

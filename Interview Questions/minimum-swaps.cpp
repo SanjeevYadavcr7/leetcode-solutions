@@ -25,7 +25,8 @@ class Solution {
                 int sortedNumIdx = numIndexMap[sortedArr[i]];
                 
                 swap(arr[i], arr[sortedNumIdx]);
-                
+
+                // after swapping the elements update hashmap as well
                 numIndexMap[arr[sortedNumIdx]] = sortedNumIdx;
                 numIndexMap[arr[i]] = i;
             }

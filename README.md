@@ -14,8 +14,8 @@
 - [x] Graphs
 - [ ] Dynamic Programming
 
-## ⚡ Problems Tracker
-- 📋 [Revision Sheet](https://www.notion.so/33169a7a738c80e287e9d8b18231413d?v=33169a7a738c80c8b7eb000c355ae625)
+## ⚡ Revision Sheet:
+- 📋 [Graph](https://app.notion.com/p/Graph-39069a7a738c80e8848be62b8bb233b3)
 
 
 ## 📚 Resources

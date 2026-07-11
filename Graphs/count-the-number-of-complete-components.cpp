@@ -1,6 +1,7 @@
 /*
   Algorithm: Kruskal's Union-Find
   Time: O(V + E)  ->  O(V) : Loop to check complete components + O(E) : classic union find
+  Space: O(V)
 */
 
 class UnionFind {

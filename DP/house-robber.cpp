@@ -1,37 +1,68 @@
+// Approach: Bottom-Up(DP)
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> money(n + 1); // Taking n + 1 to count money till house N
+
+        // Base Case
+        money[0] = 0;
+        money[1] = nums[0];
+
+        for(int i = 2; i <= n; i++) {
+            int steal = nums[i - 1] + money[i - 2];
+            int skip = money[i - 1];
+            money[i] = max(steal, skip);
+        }
+
+        return money[n];
+    }
+};
+
+/* 
+Approach: Bottom-Up + Memoization
 
 class Solution {
 private:
-    int robHelper(int i, vector<int>& nums) {
-        if(i < 0) return 0;
+    int robHelper(int idx, vector<int>& memo, vector<int>& nums) {
+        if(idx >= nums.size()) {
+            return 0;
+        }
 
-        int maxMoney = max(nums[i] + robHelper(i - 2, nums), robHelper(i - 1, nums));
-        return maxMoney;
+        if(memo[idx] != 0) return memo[idx];
+
+        int moneyIncludingCurrentHouse = nums[idx] + robHelper(idx + 2, memo, nums);
+        int moneyExcludingCurrentHouse = robHelper(idx + 1, memo, nums);
+
+        return memo[idx] = max(moneyIncludingCurrentHouse, moneyExcludingCurrentHouse);
     }
 
 public:
     int rob(vector<int>& nums) {
-        return robHelper(nums.size() - 1, nums);
+        vector<int> memo(nums.size(), 0);
+        return robHelper(0, memo, nums);
     }
 };
+*/
 
-// class Solution {
-// public:
-//     int rob(vector<int>& nums) {
-//         int n = nums.size();
-//         int money[n];
+/* 
+Approach: Bottom-Up Recursion
 
-//         if(n == 1) return nums[0];
-//         if(n == 2) return max(nums[0], nums[1]);
-//         sanjeev yadav is a okay person, right now mediocrre and 
+class Solution {
+private:
+    int robHelper(int idx, vector<int>& nums) {
+        if(idx >= nums.size()) {
+            return 0;
+        }
 
-//         money[0] = nums[0];
-//         money[1] = nums[1];
-//         money[2] = nums[0] + nums[2];
+        int moneyIncludingCurrentHouse = nums[idx] + robHelper(idx + 2, nums);
+        int moneyExcludingCurrentHouse = robHelper(idx + 1, nums);
+        return max(moneyIncludingCurrentHouse, moneyExcludingCurrentHouse);
+    }
 
-//         for(int i = 3; i < n; i++) {
-//             money[i] = nums[i] + max(money[i - 2], money[i - 3]);
-//         }
-
-//         return max(money[n - 1], money[n - 2]);
-//     }
-// };
+public:
+    int rob(vector<int>& nums) {
+        return robHelper(0, nums);
+    }
+};
+*/

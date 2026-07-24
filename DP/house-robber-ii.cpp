@@ -4,8 +4,8 @@
 class Solution {
 private: 
     int robHelper(int start, int end, vector<int>& nums) {
-        int rob1 = 0;
-        int rob2 = 0;
+        int rob1 = 0; // represents i - 2 value
+        int rob2 = 0; // respresnts i - 1 value
 
         for(int i = start; i <= end; i++) {
             int currMax = max(nums[i] + rob1, rob2);

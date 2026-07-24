@@ -1,4 +1,33 @@
+/*
+    Optimized Bottom-up in O(1) space and O(N) Time.
+*/
+class Solution {
+private: 
+    int robHelper(int start, int end, vector<int>& nums) {
+        int rob1 = 0;
+        int rob2 = 0;
 
+        for(int i = start; i <= end; i++) {
+            int currMax = max(nums[i] + rob1, rob2);
+            rob1 = rob2;
+            rob2 = currMax;
+        }
+
+        return rob2;
+    }
+public:
+    int rob(vector<int>& nums) {
+        int n = nums.size();
+        if(n == 1) return nums[0];
+
+        return max(robHelper(0, n - 2, nums), robHelper(1, n - 1, nums));
+    }
+};
+
+
+/* -------------------------------------------------------------------------------
+    Bottom-up in O(N) Space and Time.
+*/
 class Solution {
 private:
     int robHelper(vector<int>& nums) {

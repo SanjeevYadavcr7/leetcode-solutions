@@ -13,7 +13,7 @@ private:
             rob2 = currMax;
         }
 
-        return rob2;
+        return rob2; // return current maximum value
     }
 public:
     int rob(vector<int>& nums) {

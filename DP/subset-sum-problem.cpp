@@ -1,4 +1,38 @@
 /*
+Approach: DP
+Time Complexity: O(N.Sum) :: Space Complexity: O(N.Sum)
+*/
+class Solution {
+  public:
+    bool isSubsetSum(vector<int>& arr, int sum) {
+        int n = arr.size();
+        vector<vector<bool>> dp(n + 1, vector<bool>(sum + 1, false));
+        
+        for(int i = 0; i <= n; i++) dp[i][0] = true;
+        
+        
+        for(int i = 1; i <=n; i++) {
+            for(int j = 1; j <= sum; j++) {
+                
+                // Don't take current element
+                bool skip = dp[i - 1][j];
+                
+                bool take = false;
+                if(arr[i - 1] <= j) {
+                    // Take current element
+                    take = dp[i - 1][j - arr[i - 1]];
+                }
+                
+                dp[i][j] = (skip || take);
+            }
+        }
+        
+        return dp[n][sum];
+    }
+};
+
+
+/*-----------------------------------------------------------------------------
 Approach: Memoization
 
 class Solution {

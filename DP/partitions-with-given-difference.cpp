@@ -1,4 +1,40 @@
 /*
+Approach: DP (2D array)
+
+class Solution {
+      public:
+    int countPartitions(vector<int>& arr, int diff) {
+        int n = arr.size();
+        int sum = accumulate(arr.begin(), arr.end(), 0);
+        
+        // if two equal partition is not possible -> return 0
+        if((sum + diff) & 1) return 0; 
+        
+        int target = (sum + diff) >> 1;
+        vector<vector<int>> dp(n + 1, vector<int>(target + 1, 0));
+        
+        // Only marking (0,0) because array itself can have 0s which will increase count of first row
+        dp[0][0] = 1;
+        
+        for(int i = 1; i <= n; i++) {
+            for(int j = 0; j <= target; j++) {
+                int skip = dp[i - 1][j];
+                
+                int take = 0;
+                if(arr[i - 1] <= j) {
+                    take = dp[i - 1][j - arr[i - 1]];
+                }
+                
+                dp[i][j] = skip + take;
+            }
+        }
+        
+        return dp[n][target];
+    }
+};
+*/
+
+/*
 Approach: Recursion + Memoization
 
 class Solution {

@@ -1,5 +1,6 @@
 /*
 Approach: DP (1D array)
+*/
 
 class Solution {
       public:
@@ -26,9 +27,8 @@ class Solution {
         return dp[target];
     }
 };
-*/
 
-/*
+/*---------------------------------------------------------------------------
 Approach: DP (2D array)
 
 class Solution {
@@ -64,7 +64,7 @@ class Solution {
 };
 */
 
-/*
+/*---------------------------------------------------------------------------
 Approach: Recursion + Memoization
 
 class Solution {

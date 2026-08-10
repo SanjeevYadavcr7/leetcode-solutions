@@ -1,4 +1,34 @@
 /*
+Approach: DP (1D array)
+
+class Solution {
+      public:
+    int countPartitions(vector<int>& arr, int diff) {
+        int n = arr.size();
+        const int MOD = 1e9 + 7;
+        int sum = accumulate(arr.begin(), arr.end(), 0);
+        
+        // if two equal partition is not possible -> return 0
+        if((sum + diff) & 1) return 0; 
+        
+        int target = (sum + diff) >> 1;
+        vector<int> dp(target + 1, 0);
+        
+        // Only marking 0th index because array itself can have 0s which will increase count of first row
+        dp[0] = 1;
+        
+        for(int& num : arr) {
+            for(int t = target; t >= num; t--) {
+                dp[t] = (dp[t] + dp[t - num]) % MOD;
+            }
+        }
+        
+        return dp[target];
+    }
+};
+*/
+
+/*
 Approach: DP (2D array)
 
 class Solution {

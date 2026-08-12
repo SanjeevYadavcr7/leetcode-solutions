@@ -1,3 +1,27 @@
+/*
+Approach: DP (1D array)
+*/
+class Solution {
+public:
+    int coinChange(vector<int>& coins, int amount) {
+        const int INF = amount + 1;
+        vector<int> minCoins(amount + 1, INF);
+
+        minCoins[0] = 0;
+
+        for(int i = 1; i <= amount; i++) {
+            for(int& coin : coins) {
+                if(i >= coin) {
+                    minCoins[i] = min(minCoins[i], 1 + minCoins[i - coin]);
+                }
+            }
+        }
+        
+        return minCoins[amount] > amount ? -1 : minCoins[amount];
+    }
+};
+
+
 /*---------------------------------------------------------------------
 Approach: DP (2D array)
 

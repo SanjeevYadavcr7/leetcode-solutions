@@ -1,4 +1,26 @@
-/*---------------------------------------------------------------
+// Approach: DP (1D array)
+
+class Solution {
+public:
+    int change(int amount, vector<int>& coins) {
+        vector<unsigned int> dp(amount + 1, 0);
+
+        // Zero(0) amount can be formed with zero elements
+        dp[0] = 1;
+
+        for(int& coin : coins) {
+            for(int j = 1; j <= amount; j++) {
+                if(j >= coin) {
+                    dp[j] = (dp[j] + dp[j - coin]);
+                }
+            }
+        }
+
+        return dp[amount];
+    }
+};
+
+/*-----------------------------------------------------------------------
 Approach: DP (2D array)
 
 class Solution {
@@ -26,7 +48,7 @@ public:
 };
 */
 
-/*
+/*-----------------------------------------------------------------------
 Approach: Recursion + Memoization
 
 NOTE: Using pick and non-pick approach we make sure that permutations are not formed.

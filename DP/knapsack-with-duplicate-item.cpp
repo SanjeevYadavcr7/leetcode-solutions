@@ -1,3 +1,26 @@
+/*
+Approach: DP (1D array)
+*/
+
+class Solution {
+  public:
+    int knapSack(vector<int>& val, vector<int>& wt, int capacity) {
+        int n = val.size();
+        vector<int> dp(capacity + 1, 0);
+        
+        for(int i = 1; i <= n; i++) {
+            int currWeight = wt[i - 1];
+            int currVal = val[i - 1];
+            
+            for(int j = currWeight; j <= capacity; j++) {
+                    dp[j] = max(dp[j], currVal + dp[j - currWeight]);
+            }
+        }
+        
+        return dp[capacity];
+    }
+};
+
 /*----------------------------------------------------------------------------
 Approach: DP (2D array)
 

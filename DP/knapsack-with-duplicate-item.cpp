@@ -1,3 +1,31 @@
+/*----------------------------------------------------------------------------
+Approach: DP (2D array)
+class Solution {
+  public:
+    int knapSack(vector<int>& val, vector<int>& wt, int capacity) {
+        int n = val.size();
+        vector<vector<int>> dp(n + 1, vector<int>(capacity + 1, 0));
+        
+        for(int i = 1; i <= n; i++) {
+            int currWeight = wt[i - 1];
+            int currVal = val[i - 1];
+            
+            for(int j = 1; j <= capacity; j++) {
+                int skip = dp[i - 1][j];
+                
+                int take = 0;
+                if(j >= currWeight) {
+                    take = currVal + dp[i][j - currWeight];
+                }
+                
+                dp[i][j] = max(skip, take);
+            }
+        }
+        
+        return dp[n][capacity];
+    }
+};
+*/
 
 /*----------------------------------------------------------------------------
 Approach: Recursion + Memoization

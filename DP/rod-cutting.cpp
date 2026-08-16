@@ -1,3 +1,14 @@
+/*
+Approach - DP (1D array)
+
+maxPrice[i] = maximum value can be obtained by selling upto length "i + 1"
+
+So the recurrence relation is:
+    maxPrice[i] = max(maxPrice[i], (maxPrice[beg] + maxPrice[end]));
+
+This means for length 4:
+    maxPrice = max((0 + 4), (1 + 3), (2 + 2))
+*/
 class Solution {
   public:
     int cutRod(vector<int> &price) {

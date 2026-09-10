@@ -19,6 +19,7 @@ public:
             for(int j = 1; j <= N; j++) {
                 char ch2 = t[j - 1];
                 if(ch1 == ch2) {
+                    // even when both characters match, we search the same character again in "s"
                     dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
                 } else {
                     dp[i][j] = dp[i - 1][j];
